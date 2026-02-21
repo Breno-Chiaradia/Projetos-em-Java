@@ -1,0 +1,19 @@
+package com.mycompany._locadoracarros;
+
+import java.util.Scanner;
+
+public class App {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=======================");
+        System.out.println("Quantos KMs percoridos: ");
+        double km = sc.nextDouble();
+        System.out.println("Quantos dias o carro foi alugado: ");
+        int dias = sc.nextInt();
+        double precototal = (km * 0.20) + (dias * 90);
+        System.out.println("Foram percoridos " + km + "KMs e o carro foi alugados por " + dias + " dias "
+                + "O total foi de " + precototal);
+        
+    }
+}
