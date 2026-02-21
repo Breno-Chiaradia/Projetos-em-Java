@@ -1,0 +1,18 @@
+package com.mycompany._dinheirous;
+
+import java.util.Scanner;
+
+public class App {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("===== Conversor UR$ =====");
+        System.out.println("Digite uma quantia R$: ");
+        double carteira = sc.nextDouble();
+        
+        double contdolar = 5.49;
+        double dolares = carteira / contdolar; 
+        
+        System.out.printf("Com R$%.2f, voce pode comprar US$%.2f%n", carteira, dolares);
+    }
+}
