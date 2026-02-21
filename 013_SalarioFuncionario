@@ -1,0 +1,18 @@
+package com.mycompany._salariofuncionario;
+
+import java.util.Scanner;
+
+public class App {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double salario;
+        System.out.println("Digite seu salario: ");
+        salario = sc.nextDouble();
+        
+        double novosalario = salario + (salario * 15 / 100);
+        
+        System.out.printf("Seu salario que era de %.2f agora e de %.2f", salario, novosalario);
+        
+    }
+}
