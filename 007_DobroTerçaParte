@@ -1,0 +1,17 @@
+package pkg007_dobroterçaparte;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero: ");
+        float num = sc.nextFloat();
+        float dobro = num * 2;
+        float tercp = num / 3;
+        System.out.println("O dobro desse numero e " + dobro);
+        System.out.println("A terca parte e " + tercp);
+    }
+    
+}
