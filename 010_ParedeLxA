@@ -1,0 +1,18 @@
+package com.mycompany._paredelxa;
+
+import java.util.Scanner;
+
+public class App {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite uma Largura de uma parede: ");
+        double largura = sc.nextDouble();
+        System.out.println("Digite uma Altura de uma parede: ");
+        double altura = sc.nextDouble();
+        double area = largura * altura;
+        double latadetinta = area / 2;
+        System.out.printf("Area da parede: %.2f m2%n", area);
+        System.out.printf("Quantidade de tinta necessaria: %.2f litros%n", latadetinta);
+    }
+}
