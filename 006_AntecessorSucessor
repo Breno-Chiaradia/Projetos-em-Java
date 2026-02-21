@@ -1,0 +1,17 @@
+package pkg006_antecessorsucessor;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero para ver seu Antecessor e Sucessor: ");
+        int num = sc.nextInt();
+        int antecessor = num - 1, sucessor = num + 1;
+        System.out.println("O Antecessor de " + num + " e " + antecessor +
+                " O Sucessor de " + num + " e " + sucessor);
+        
+    }
+    
+}
