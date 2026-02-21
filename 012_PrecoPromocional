@@ -1,0 +1,17 @@
+package com.mycompany._precopromocional;
+
+import java.util.Scanner;
+
+public class App {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double preco, desconto;
+        System.out.println("Digite o valor do produto: ");
+        preco = sc.nextDouble();
+        
+        desconto = preco - (preco * 5 / 100);
+        
+        System.out.println("O produto tera 5% de descconto e saira por " + desconto);
+    }
+}
