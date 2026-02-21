@@ -1,0 +1,25 @@
+package pkg008_distânciam2;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite um numero para ver em m2:");
+        double num = sc.nextDouble();
+        
+        double km = num  / 1000;
+        double hm = num / 100;
+        double dam = num / 10;
+        double dm = num * 10;
+        double cm = num * 100;
+        double mm = num * 1000;
+        
+        System.out.println("A distancia de " + num + " corresponde a: "
+                + " km: " + km + " hm: " + hm + " Dam: " + dam + " dm: " + dm + " cm: " + cm + " mm: " + mm);
+        
+        
+    }
+    
+}
