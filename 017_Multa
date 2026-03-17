@@ -1,0 +1,20 @@
+package pkg017_multa;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Qual foi a velodicade do carro: ");
+        int velocidade = sc.nextInt();
+        if (velocidade > 80){
+            System.out.println("Voce foi multado!");
+            int valorMulta = (velocidade - 80) * 5;
+            System.out.println("Valor da multa R$" + valorMulta);
+        }else{
+            System.out.println("Velocidade permitida!");
+        }
+    }
+    
+}
