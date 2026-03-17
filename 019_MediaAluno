@@ -1,0 +1,25 @@
+package pkg019_mediaaluno;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nome do aluno: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite sua primeira nota: ");
+        double nota1 = sc.nextDouble();
+        System.out.println("Digite sua segunda nota: ");
+        double nota2 = sc.nextDouble();
+        double media = (nota1 + nota2) / 2;
+        System.out.println("Sua nota: " + media);
+        if(media >= 7){
+            System.out.println("O aluno teve um bom aproveitamento");
+        }else{
+            System.out.println("O aluno não teve um bom aproveitamento");
+        } 
+        
+    }
+    
+}
