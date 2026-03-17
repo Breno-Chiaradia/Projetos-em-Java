@@ -1,0 +1,26 @@
+package pkg016_fumante;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos cigarros você fuma por dia? ");
+        int quantidadeCigarros = sc.nextInt();
+
+        System.out.print("Quantos anos você fuma? ");
+        int anosFumando = sc.nextInt();
+
+        int diasFumando = anosFumando * 365;
+        int totalCigarros = quantidadeCigarros * diasFumando;
+
+        double minutosPerdidos = totalCigarros * 10;
+        double horasPerdidas = minutosPerdidos / 60;
+        double diasPerdidos = horasPerdidas / 24;
+
+        System.out.println("Você perdeu aproximadamente " + diasPerdidos + " dias de vida.");
+    }
+    
+}
