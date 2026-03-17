@@ -1,0 +1,20 @@
+package pkg020_parimpar;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite um numero: ");
+        int num = sc.nextInt();
+        
+        if(num % 2 == 0){
+            System.out.printf("O numero %d%n e PAR%n", num);
+        }else{
+            System.out.printf("O numero %d e IMPAR%n", num);
+        }
+    }
+    
+}
