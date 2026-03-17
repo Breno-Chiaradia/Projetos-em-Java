@@ -1,0 +1,21 @@
+package pkg018_votar;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Qual ano voce nasceu: ");
+        int anoNasc = sc.nextInt();
+        int idade = 2025 - anoNasc;
+        if (idade >= 16 && idade < 18 || idade >= 71){
+            System.out.println("Voce pode Votar! porem nao Obrigatorio.");
+        }else if (idade >= 18 && idade < 71){
+            System.out.println("Voce deve votar!");
+        }else{
+            System.out.println("Voce nao pode votar!");
+        } 
+    }
+    
+}
