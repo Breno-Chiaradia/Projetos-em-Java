@@ -1,0 +1,29 @@
+package pkg022_alistamentomilitar;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int anoatual = LocalDate.now().getYear();
+        
+        System.out.println("Digite seu ano de nacimento: ");
+        int anoNasc = sc.nextInt();
+        
+        int idade = anoatual - anoNasc;
+        System.out.println(idade + " anos ");
+        int anodealistamento = anoNasc + 18;
+        
+        if(idade == 18){
+            System.out.println("Voce deve se alistar IMEDIATAMENTE!");
+        }else if(idade >= 19){
+            System.out.println("Voce ja deveria ter se alistado no ano de " + anodealistamento);
+        }else{
+            System.out.println("Voce nao pode se alistar ainda!");
+        }
+        sc.close();
+    }
+    
+}
