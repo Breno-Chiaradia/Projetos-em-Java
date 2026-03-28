@@ -1,0 +1,36 @@
+package pkg025_triangulo;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double a, b, c;
+        
+        System.out.println("Digite o primeiro segmento: ");
+        a = sc.nextDouble();
+        
+        System.out.println("Digite o segundo segmento: ");
+        b = sc.nextDouble();
+        
+        System.out.println("Digite o terceiro segmento: ");
+        c = sc.nextDouble();
+        
+        if(a + b > c && a + c > b && b + c > a){
+            System.out.println("Forma um triangulo!");
+            if(a == b && b == c){
+                System.out.println("Triangulo Equilatero");  
+            }else if(a == b || a == c || b == c){
+                System.out.println("Triangulo Isoceles");
+            }else{
+                System.out.println("Triangulo Escaleno");
+            }    
+        }else{
+            System.out.println("Nao forma um triangulo! ");
+        }
+        sc.close();
+    }
+    
+}
