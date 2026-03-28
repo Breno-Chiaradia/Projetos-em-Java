@@ -1,0 +1,39 @@
+package pkg023_promocao;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite seu nome: ");
+        //.trim() -> remove espaços no começo e no fim
+        String nome = sc.nextLine().trim();
+        
+        System.out.println("Qual e seu sexo [M/F]: ");
+        String sexo =  sc.nextLine().trim();
+        //A primeira letras sera sempre maiúsculas e as demais minúsculas
+        //String formatado = sexo.substring(0,1).toUpperCase() + sexo.substring(1).toLowerCase();
+        
+        System.out.println("Valor da compra R$: ");
+        double valorc = sc.nextDouble();
+        
+        if(sexo.equalsIgnoreCase("F")){
+            System.out.println("sexo = Feminino");
+            System.out.println("Mulheres gaham desconto de ate 13% nas suas compras");
+            double descontof = valorc - (valorc * 13 / 100);
+            System.out.printf("Sus compras vao de R$%f para R$%f \n", valorc, descontof);           
+        }else if (sexo.equalsIgnoreCase("M")){
+            System.out.println("sexo = Masculino");
+            System.out.println("Homens gaham desconto de ate 5% nas suas compras");
+            double descontom = valorc - (valorc * 5 / 100);
+            System.out.printf("Sus compras vao de R$%.2f para R$%.2f \n", valorc, descontom);
+        }else{
+            System.out.println("Sexo informado invalido");
+        }
+        
+      sc.close();
+    }
+    
+}
