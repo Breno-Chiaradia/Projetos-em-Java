@@ -1,0 +1,24 @@
+package pkg024_viagemkm;
+
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Qual e a distancia em Km: ");
+        int distancia = sc.nextInt();
+        
+        if (distancia <= 200){
+            double preco = distancia * 0.50;
+            System.out.println("Sua viagem vai ficar " + preco);
+            
+        }else if(distancia > 200){
+            double preco = distancia * 0.45;
+            System.out.println("Sua viagem vai ficar " + preco);
+        }
+        sc.close();
+    }
+    
+}
