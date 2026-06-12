@@ -1,0 +1,27 @@
+package pkg032_computador1a5;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int numeroSorteado = random.nextInt(5) + 1; // sorteia de 1 a 5
+        System.out.print("Tente adivinhar o número (entre 1 e 5): ");
+        int palpite = scanner.nextInt();
+
+        if (palpite < 1 || palpite > 5) {
+            System.out.println("Número inválido! Tente um número entre 1 e 5.");
+        } else if (palpite == numeroSorteado) {
+            System.out.println("Parabéns! Você acertou o número.");
+        } else {
+            System.out.println("Que pena! O número sorteado foi " + numeroSorteado + ".");
+        }
+
+        scanner.close();
+    }
+    
+}
