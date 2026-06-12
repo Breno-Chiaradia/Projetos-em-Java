@@ -1,0 +1,30 @@
+package pkg028;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite a largura do tereno: ");
+        double largura = sc.nextDouble();
+        
+        System.out.println("Digite a altura do tereno: ");
+        double altura = sc.nextDouble();
+        
+        double area = largura * altura;
+        
+        System.out.printf("A area do tereno e %.2f\n", area);
+        
+        if(area < 100){
+            System.out.println("TERRENO POPULAR");
+        }else if(area >= 100 && area < 500){
+            System.out.println("TERRENO MASTER ");
+        }else{
+            System.out.println("TERRENO VIP");
+        }
+        sc.close();
+    }
+    
+}
