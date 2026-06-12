@@ -1,0 +1,18 @@
+package pkg031_jokenpo;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Vamos jogar Pedra papel e tesoura");
+        
+        System.out.println(" [ 1 ] Pedra \n [ 2 ] Papel \n [ 3 ] Tesoura");
+        int usuario = sc.nextInt();
+        
+        
+    }
+    
+}
