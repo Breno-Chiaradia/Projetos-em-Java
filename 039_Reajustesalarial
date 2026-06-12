@@ -1,0 +1,54 @@
+package pkg037_reajustesalarial;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.print("Informe o salário atual: R$ ");
+        double salario = scanner.nextDouble();
+
+        System.out.print("Informe o gênero (M para mulher, H para homem): ");
+        String genero = scanner.next();
+
+        System.out.print("Há quantos anos trabalha na empresa: ");
+        int anos = scanner.nextInt();
+
+        double percentualAumento = 0;
+
+        // Lógica de reajuste usando equalsIgnoreCase()
+        if (genero.equalsIgnoreCase("M")) {
+            if (anos < 15) {
+                percentualAumento = 0.05;
+            } else if (anos <= 20) {
+                percentualAumento = 0.12;
+            } else {
+                percentualAumento = 0.23;
+            }
+        } else if (genero.equalsIgnoreCase("H")) {
+            if (anos < 20) {
+                percentualAumento = 0.03;
+            } else if (anos <= 30) {
+                percentualAumento = 0.13;
+            } else {
+                percentualAumento = 0.25;
+            }
+        } else {
+            System.out.println("Gênero inválido. Use 'M' para mulher ou 'H' para homem.");
+            scanner.close();
+            return;
+        }
+
+        double novoSalario = salario + (salario * percentualAumento);
+
+        // Saída
+        System.out.printf("Reajuste de %.0f%% aplicado.\n", percentualAumento * 100);
+        System.out.printf("Novo salário: R$ %.2f\n", novoSalario);
+
+        scanner.close();
+    }
+    
+}
