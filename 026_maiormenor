@@ -1,0 +1,27 @@
+package pkg026_maiormenor;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       
+        System.out.println("Digite o primeiro valor: ");
+        int num1 = sc.nextInt();
+        
+        System.out.println("Digite o segundo valor: ");
+        int num2 = sc.nextInt();
+        
+        if(num1 > num2){
+            System.out.printf("O valor %d e maior\n", num1);
+            System.out.printf("O valor %d e menor\n", num2);
+        }else if(num2 > num1){
+            System.out.printf("O valor %d e maior\n", num2);
+            System.out.printf("O valor %d e menor\n", num1);
+        }else{
+            System.out.println("Os valores sao iguais!!!");
+        }
+    }
+    
+}
