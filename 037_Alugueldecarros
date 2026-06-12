@@ -1,0 +1,53 @@
+package pkg035_alugueldecarros;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.print("Tipo de carro (popular ou luxo): ");
+        String tipoCarro = scanner.nextLine().toLowerCase();
+
+        System.out.print("Quantos dias de aluguel: ");
+        int dias = scanner.nextInt();
+
+        System.out.print("Quantos Km foram percorridos: ");
+        double km = scanner.nextDouble();
+
+        double precoPorDia;
+        double precoPorKm;
+        double precoTotal = 0;
+
+        // Lógica de cálculo com base no tipo do carro
+        if (tipoCarro.equals("popular")) {
+            precoPorDia = 90.0;
+            if (km <= 100) {
+                precoPorKm = 0.20;
+            } else {
+                precoPorKm = 0.10;
+            }
+        } else if (tipoCarro.equals("luxo")) {
+            precoPorDia = 150.0;
+            if (km <= 200) {
+                precoPorKm = 0.30;
+            } else {
+                precoPorKm = 0.25;
+            }
+        } else {
+            System.out.println("Tipo de carro inválido.");
+            scanner.close();
+            return;
+        }
+
+        precoTotal = (dias * precoPorDia) + (km * precoPorKm);
+
+        // Resultado
+        System.out.printf("Valor total a pagar: R$ %.2f\n", precoTotal);
+
+        scanner.close();
+    }
+    
+}
