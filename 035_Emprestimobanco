@@ -1,0 +1,36 @@
+package pkg035_emprestimobanco;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.print("Valor da casa: R$ ");
+        double valorCasa = scanner.nextDouble();
+
+        System.out.print("Salário do comprador: R$ ");
+        double salario = scanner.nextDouble();
+
+        System.out.print("Quantos anos para pagar: ");
+        int anos = scanner.nextInt();
+
+        // Cálculo da prestação
+        int totalMeses = anos * 12;
+        double prestacao = valorCasa / totalMeses;
+        double limite = salario * 0.30;
+
+        // Verificação da aprovação
+        System.out.printf("Prestação mensal: R$ %.2f\n", prestacao);
+        if (prestacao <= limite) {
+            System.out.println("Empréstimo APROVADO!");
+        } else {
+            System.out.println("Empréstimo NEGADO! A prestação excede 30% do salário.");
+        }
+
+        scanner.close();
+    }
+    
+}
