@@ -1,0 +1,36 @@
+package pkg029_reajuste;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Qual e seu nome: ");
+        String nome = sc.nextLine();
+        
+        System.out.println("Salario: ");
+        double salario = sc.nextDouble();
+        
+        System.out.println("Quantos anos trabalha na empresa: ");
+        int anos = sc.nextInt();
+        
+        if(anos < 3){
+            System.out.println("Voce recebeu um aumento de 3% no salario!");
+            double aumento = salario + (salario * 3 / 100);
+            System.out.println("Nome: " + nome + " Salario: " + aumento + " anos: " + "anos");
+        }else if(anos >= 3 && anos < 10){
+            System.out.println("Voce recebeu um aumento de 12.5% no salario!");
+            double aumento = salario + (salario * 12.5 / 100);
+            System.out.println("Nome: " + nome + " Salario: " + aumento + " anos: " + "anos");
+        }else{
+            System.out.println("Voce recebeu um aumento de 20% no salario!");
+            double aumento = salario + (salario * 20 / 100);
+            System.out.println("Nome: " + nome + " Salario: " + aumento + " anos: " + "anos");
+        }
+        sc.close();
+    }
+    
+    
+}
