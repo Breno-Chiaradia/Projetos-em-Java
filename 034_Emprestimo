@@ -1,0 +1,36 @@
+package pkg033_emprestimo;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Qual e o valor da casa: ");
+        double valorcasa = sc.nextDouble();
+        
+        System.out.println("Qual e seu salario: ");
+        double salario = sc.nextDouble();
+        
+        System.out.println("Quantos anos depende pagar: ");
+        int anos = sc.nextInt();
+        
+        double salario30 = salario * 30 / 100;
+        
+        double parcelas = valorcasa / (anos * 12);
+        
+        if(salario30 < parcelas){
+            System.out.println("Emprestimo negado!");   
+            
+        }else if(salario30 > parcelas){
+            System.out.println("Emprestimo Aprovado!");
+            
+        }else{
+            System.out.println("Informacoes incorretas");
+            
+        }
+        sc.close();
+    }
+    
+}
